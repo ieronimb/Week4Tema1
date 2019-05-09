@@ -33,7 +33,7 @@ namespace Week4Tema1
             iPhone4S = new GSM("iPhone 4S", "Apple", 100.99, "Unknown");
         }
 
-        ////Problem 5. Properties -> Use properties to encapsulate the data fields inside the GSM, Battery and Display classes <GSM>
+        //Problem 5. Properties -> Use properties to encapsulate the data fields inside the GSM, Battery and Display classes <GSM>
         //Ensure all fields hold correct data at any given time.
         public string GSMModel
         {
