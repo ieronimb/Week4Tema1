@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Week4Tema1
 {
-    class MobilePhoneDevice
+    class Display
     {
     }
 }
