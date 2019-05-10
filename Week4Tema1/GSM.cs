@@ -15,7 +15,9 @@ namespace Week4Tema1
         private string gsmModel;
         private string gsmManufacturer;
         private double gsmPrice;
-        private string gsmOwner;              
+        private string gsmOwner;       
+        
+
 
         //Problem 2. Constructors -> Define several constructors for the defined classes that take different sets of arguments (the full information for the class or part of it).
         public GSM(string gsmModel, string gsmManufacturer, double gsmPrice, string gsmOwner)
@@ -24,7 +26,36 @@ namespace Week4Tema1
             this.gsmManufacturer = gsmManufacturer;
             this.gsmPrice = gsmPrice;
             this.gsmOwner = gsmOwner;
+
         }
+
+        //Assume that model and manufacturer are mandatory (the others are optional). All unknown data fill with null.
+        public string GsmModel
+        {
+            get { return this.gsmModel; }
+
+            private set
+            {
+                if (value == null)
+                    throw new ArgumentNullException("Model cannot be empty!");
+
+                this.gsmModel = value;
+            }
+        }
+
+        public string GsmManufacturer
+        {
+            get { return this.gsmManufacturer; }
+
+            private set
+            {
+                if (value == null)
+                    throw new ArgumentNullException("Manufacturer cannot be empty!");
+
+                this.gsmManufacturer = value;
+            }
+        }
+
 
         //Problem 6. Static field -> Add a static field and a property IPhone4S in the GSM class to hold the information about iPhone 4S.
         private static GSM iPhone4S;
@@ -63,18 +94,7 @@ namespace Week4Tema1
         {
             get { return iPhone4S; }
             set { iPhone4S = value; }
-        }
+        }      
 
-        //Problem 4. ToString -> Add a method in the GSM class for displaying all information about it.
-        //Try to override ToString().
-        public override string ToString()
-        {           
-            Console.WriteLine("Model: {0}.",this.gsmModel);
-            Console.WriteLine("Manufacturer: {0}.",this.gsmManufacturer);
-            Console.WriteLine("Price: {0} euro.", this.gsmPrice);
-            Console.WriteLine("Owner: {0}.",this.gsmOwner);
-            Console.WriteLine();
-            return ToString();
-        }       
-    }
+    }   
 }
